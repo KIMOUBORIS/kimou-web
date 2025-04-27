@@ -1,20 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 
-export default function App() {
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <div style={styles.container}>
+      <h1 style={styles.title}>Bienvenue sur Kimou Web !</h1>
+      <p style={styles.text}>Ton site fonctionne parfaitement 🎉</p>
+    </div>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    height: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#f0f2f5',
   },
-});
+  title: {
+    fontSize: '2.5rem',
+    color: '#333',
+  },
+  text: {
+    fontSize: '1.2rem',
+    color: '#555',
+  },
+};
+
+export default App;
